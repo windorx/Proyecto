@@ -30,6 +30,7 @@ public class Herencia {
     private ArrayList<Integer> posicionesX = new ArrayList<>(); //posiciones x de la figura.
     private ArrayList<Integer> posicionesY = new ArrayList<>(); //posiciones y de la figura.
     
+    
     public Herencia(Entidad entidadPadre, ArrayList<Entidad> hijas,String tipoHerencia,int posX,int posY) {
         this.posX=posX;
         this.posY=posY;
