@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="root" prefHeight="284.0" prefWidth="246.0" style="-fx-background-color: rgb(240,255,255);" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.AtributosController">
+   <children>
+      <ComboBox fx:id="destinoAtributo" layoutX="50.0" layoutY="100.0" onAction="#crearAtributoEn" prefWidth="150.0" style="-fx-border-color: rgb(0,128,128);" />
+      <ComboBox fx:id="entidadesAtributosRelaciones" layoutX="50.0" layoutY="142.0" prefWidth="150.0" style="-fx-border-color: rgb(0,128,128);" />
+      <ComboBox fx:id="tiposAtributos" layoutX="50.0" layoutY="178.0" prefWidth="150.0" style="-fx-border-color: rgb(0,128,128);" />
+      <TextField fx:id="textoAtributo" layoutX="51.0" layoutY="56.0" style="-fx-border-color: rgb(0,128,128);" />
+      <Text layoutX="80.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre Atributo" />
+      <Button fx:id="cerrarVentana" layoutX="24.0" layoutY="234.0" mnemonicParsing="false" onAction="#Aceptar" style="-fx-border-color: rgb(0,128,128);" text="Crear atributo" />
+      <Button layoutX="134.0" layoutY="234.0" mnemonicParsing="false" onAction="#Cancelar" prefHeight="25.0" prefWidth="90.0" style="-fx-border-color: rgb(0,128,128);" text="Cancelar" />
+   </children>
+</AnchorPane>

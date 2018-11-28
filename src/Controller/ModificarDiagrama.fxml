@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="root" prefHeight="400.0" prefWidth="329.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ModificarDiagramaController">
+   <children>
+      <Pane layoutX="6.0" layoutY="333.0" prefHeight="47.0" prefWidth="329.0" style="-fx-background-color: rgb(221,221,221);" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Button layoutX="45.0" layoutY="11.0" mnemonicParsing="false" onAction="#guardarCambios" text="Guardar Cambios" />
+            <Button fx:id="cerrarVentana" layoutX="182.0" layoutY="11.0" mnemonicParsing="false" onAction="#Cancelar" prefHeight="25.0" prefWidth="108.0" text="Cerrar" />
+         </children>
+      </Pane>
+      <TabPane layoutX="200.0" layoutY="94.0" prefHeight="353.0" prefWidth="329.0" style="-fx-border-color: rgb(181,181,181);" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="47.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <tabs>
+          <Tab text="Entidad">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="326.0" prefWidth="329.0">
+                     <children>
+                        <ComboBox fx:id="comboBoxEntidad" layoutX="90.0" layoutY="31.0" onAction="#seccionEntidad" prefWidth="150.0" />
+                        <Text layoutX="110.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Seleccione Entidad" />
+                        <TextField fx:id="modificarNombreEntidad" layoutX="91.0" layoutY="127.0" prefHeight="25.0" prefWidth="145.0" />
+                        <Text layoutX="115.0" layoutY="123.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Modificar Nombre" />
+                        <ListView fx:id="listaAtributosEntidad" layoutX="88.0" layoutY="182.0" prefHeight="79.0" prefWidth="151.0" />
+                        <Text layoutX="117.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Atributos entidad" />
+                        <Button layoutX="49.0" layoutY="288.0" mnemonicParsing="false" onAction="#modificarEntidad" text="Modificar Entidad" />
+                        <Button layoutX="165.0" layoutY="288.0" mnemonicParsing="false" onAction="#eliminarEntidad" text="Eliminar Entidad" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Relación">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ComboBox fx:id="comboBoxRelacion" layoutX="90.0" layoutY="31.0" onAction="#seccionRelacion" prefWidth="150.0" />
+                        <Text layoutX="113.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Seleccione Relación" />
+                        <Text layoutX="116.0" layoutY="92.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Modificar Nombre" />
+                        <TextField fx:id="modificarNombreRelacion" layoutX="91.0" layoutY="96.0" />
+                        <ListView fx:id="listaEntidadesRelacion" layoutX="14.0" layoutY="163.0" prefHeight="113.0" prefWidth="148.0" />
+                        <ListView fx:id="listaAtributosRelacion" layoutX="169.0" layoutY="163.0" prefHeight="112.0" prefWidth="139.0" />
+                        <Text layoutX="64.0" layoutY="159.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Entidades" />
+                        <Text layoutX="216.0" layoutY="159.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Atributos" />
+                        <Button layoutX="43.0" layoutY="289.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="119.0" text="Modificar Relación" />
+                        <Button layoutX="169.0" layoutY="289.0" mnemonicParsing="false" onAction="#eliminarRelacion" prefHeight="25.0" prefWidth="110.0" text="Eliminar Relación" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Herencia">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ComboBox fx:id="comboBoxHerencia" layoutX="89.0" layoutY="40.0" onAction="#seccionHerencia" prefWidth="150.0" />
+                        <Text layoutX="131.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Entidad padre:" />
+                        <ListView fx:id="listaEntidadesHijasHerencia" layoutX="79.0" layoutY="139.0" prefHeight="114.0" prefWidth="181.0" />
+                        <Button layoutX="49.0" layoutY="270.0" mnemonicParsing="false" text="Modificar herencia" />
+                        <Button layoutX="170.0" layoutY="270.0" mnemonicParsing="false" onAction="#eliminarHerencia" text="Eliminar herencia" />
+                        <Text layoutX="130.0" layoutY="135.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Entidades hijas" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Atributos">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ComboBox fx:id="origenAtributo" layoutX="152.0" layoutY="30.0" onAction="#atributosEncontrados" prefWidth="150.0" />
+                        <ComboBox fx:id="tipoOrigenAtributo" layoutX="16.0" layoutY="30.0" onAction="#origenAtributo" prefHeight="25.0" prefWidth="108.0" />
+                        <Text layoutX="39.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Atributo en:" />
+                        <Text layoutX="157.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Elemento que lo contiene:" wrappingWidth="139.96484375" />
+                        <Text layoutX="117.0" layoutY="159.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Modificar nombre" />
+                        <TextField fx:id="modificarNombreAtributo" layoutX="92.0" layoutY="163.0" />
+                        <Button layoutX="50.0" layoutY="274.0" mnemonicParsing="false" text="Modificar Atributo" />
+                        <Button layoutX="174.0" layoutY="274.0" mnemonicParsing="false" text="Eliminar Atributo" />
+                        <ComboBox fx:id="tiposAtributos" layoutX="92.0" layoutY="222.0" prefWidth="150.0" />
+                        <Text layoutX="133.0" layoutY="218.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cambiar tipo" />
+                        <ComboBox fx:id="comboBoxAtributo" layoutX="92.0" layoutY="99.0" prefWidth="150.0" />
+                        <Text layoutX="115.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Seleccione Atributo:" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

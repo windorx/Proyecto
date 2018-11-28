@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="root" prefHeight="400.0" prefWidth="261.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.HerenciaController">
+   <children>
+      <ComboBox fx:id="entidadPadre" layoutX="37.0" layoutY="89.0" onAction="#eliminarPadreDeHijas" prefHeight="25.0" prefWidth="189.0" />
+      <Text layoutX="94.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Entidad Padre" />
+      <ListView fx:id="entidadesHijas" layoutX="39.0" layoutY="167.0" prefHeight="134.0" prefWidth="189.0" />
+      <Text layoutX="97.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Entidades hijas" />
+      <Button fx:id="cerrarVentana" layoutX="56.0" layoutY="335.0" mnemonicParsing="false" onAction="#Aceptar" text="Aceptar" />
+      <Button layoutX="147.0" layoutY="335.0" mnemonicParsing="false" onAction="#Cancelar" text="Cancelar" />
+      <RadioButton fx:id="disyuncion" layoutX="14.0" layoutY="33.0" mnemonicParsing="false" onAction="#disyuncion" prefHeight="17.0" prefWidth="92.0" text="Disyunción" />
+      <RadioButton fx:id="solapamiento" layoutX="136.0" layoutY="33.0" mnemonicParsing="false" onAction="#solapamiento" prefHeight="17.0" prefWidth="99.0" text="Solapamiento" />
+      <Text layoutX="96.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tipo" textAlignment="CENTER" wrappingWidth="57.00000270456076" />
+   </children>
+</AnchorPane>
